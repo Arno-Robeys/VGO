@@ -30,5 +30,17 @@ namespace View
 
             this.DataContext = new ConverterViewModel();
         }
+
+        private void ConvertToCelsius(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(this, $"{textBox2.Text}°F is {(Double.Parse(textBox2.Text) - 32) / 1.8}°C", "Convert Fahrenheit naar Celcius", MessageBoxButton.OK);
+            textBox.Text = $"{(Double.Parse(textBox2.Text) - 32) / 1.8}";
+        }
+
+        private void ConvertToFahrenheit(object sender, RoutedEventArgs e)
+        {
+            //MessageBox.Show(this, $"{textBox.Text}°C is {(Double.Parse(textBox.Text) * 1.8) + 32}°F", "Convert Celcius naar Fahrenheit", MessageBoxButton.OK);
+            textBox2.Text = $"{(Double.Parse(textBox.Text) * 1.8) + 32}";
+        }
     }
 }
